@@ -1,0 +1,111 @@
+//
+   Created by reetika on 18/3/16.
+
+extends sidebar
+block main-body
+    .row
+        .col-md-12.col-sm-12
+            .ibox-title
+                h5
+                    | List of Donors
+                    a.btn.btn-xs.btn-primary(href="/add-donor.html") Add Donor
+            .ibox-content
+                .alert
+                table#datatable.table.table-bordered.table-condensed.table-striped
+                    thead
+                        tr
+                            th Name
+                            th Age
+                            th Sex
+                            th Batch
+                            th Semester
+                            th Weight
+                            th Blood Group
+                            th Medical Condition?
+                            th Description
+                            th Mobile Number
+                            th Email
+                            th Last Donated
+                            th Action
+                            th Id
+                    tbody
+                    tfoot(style="border-top: 1px solid #111; !important")
+                          tr
+                            th Name
+                            th(style="visibility: hidden; ") Age
+                            th Sex
+                            th Batch
+                            th Semester
+                            th(style="visibility: hidden;") Weight
+                            th Blood Group
+                            th Medical Condition?
+                            th Description
+                            th Mobile Number
+                            th Email
+                            th(style="visibility: hidden") Last Donated
+    // Modal
+    #myModal.modal.fade(role='dialog')
+      .modal-dialog
+        // Modal content
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal') ×
+            h4.modal-title Donor Details
+          .modal-body
+            .row
+              #donorData.col-md-12
+                .row
+                    .col-md-3 Donor Name:
+                    #Name.col-md-9
+                    .col-md-3 Phone Number:
+                    #Phone.col-md-3
+                    .col-md-1 Email:
+                    #Email.col-md-5
+                hr
+                .row
+                    .col-md-1 Age:
+                    #Age.col-md-1
+                    .col-md-1 Sex:
+                    #Sex.col-md-2
+                    .col-md-3 Blood Group:
+                    #BloodGroup.col-md-2
+                    .col-md-1 Weight:
+                    #Weight.col-md-1
+                hr
+                .row
+                    .col-md-3 Batch:
+                    #Batch.col-md-3
+                    .col-md-3 Semester:
+                    #Semester.col-md-3
+                hr
+                .row
+                    .col-md-12 Medical Condition:
+                    #MedCond.col-md-12
+                hr
+                .row
+                    .col-md-3 Last Donated
+                    #LastDonated.col-md-3
+                    .col-md-3
+                    button#lastDonated.btn.btn-primary(type='button') Donated Today
+          .modal-footer
+            button.btn.btn-default(type='button', data-dismiss='modal') Close
+.footer
+    .pull-right
+        | 10GB of
+        strong 250GB
+        |  Free.
+    div
+        strong Copyright
+        |  Example Company © 2014-2015
+
+block dependencies
+    // Custom and plugin javascript
+    script(src='js/inspinia.js')
+    script(src='js/plugins/pace/pace.min.js')
+    script(src='bower_components/datatables.net/js/jquery.dataTables.min.js')
+
+    script(src='js/authenticate.js')
+    script(src='js/donor-details.js')
+    script(src='js/plugins/metisMenu/jquery.metisMenu.js')
+    script(src='js/plugins/slimscroll/jquery.slimscroll.min.js')
+

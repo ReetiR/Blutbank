@@ -1,0 +1,52 @@
+//Created by reetika on 16/3/16.
+
+extends layout
+
+block content
+    body
+        #wrapper
+            nav.navbar-default.navbar-static-side(role='navigation')
+                .sidebar-collapse
+                    ul#side-menu.nav.metismenu
+                        li.nav-header
+                            .dropdown.profile-element
+                                span
+                                    img.img-circle(alt='image', src="https://www.gravatar.com/avatar/a3ea091ba777fc9a3532e2d4ca1b1f85")
+                                a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                    span.clear
+                                        span.block.m-t-xs
+                                            strong#username.font-bold
+                                            b.caret
+                                ul.dropdown-menu.animated.fadeInRight.m-t-xs
+                                    li
+                                        a(href='/change-password.html') Change Password
+                                    li
+                                        a(onclick='logout()') Logout
+                            .logo-element
+                                | IN+
+                        li#users
+                            a(href='/users.html')
+                                i.fa.fa-user
+                                span.nav-label Users
+                        li#donors
+                            a(href='/donors.html')
+                                i.fa.fa-user-plus
+                                span.nav-label Donors
+            #page-wrapper.gray-bg
+                .row.border-bottom
+                    nav.navbar.navbar-static-top.white-bg(role='navigation', style='margin-bottom: 0')
+                        .navbar-header
+                            a.navbar-minimalize.minimalize-styl-2.btn.btn-primary(href='#')
+                                i.fa.fa-bars
+                        ul.nav.navbar-top-links.navbar-right
+                            li
+                                a(onclick='logout()')
+                                    i.fa.fa-sign-out
+                                    |  Log out
+                .wrapper.wrapper-content.animated.fadeInRight
+                    block main-body
+
+                .footer
+                        div
+                            strong
+                            |  Reetika Roy © 2016

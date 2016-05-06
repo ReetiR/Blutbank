@@ -1,0 +1,107 @@
+//Created by reetika on 18/3/16.
+extends sidebar
+block main-body
+    .row
+        .col-md-12.col-sm-12
+            .ibox-title
+                h5 Edit User
+            .ibox-content
+                .alert.alert-dismissible(style='display: none;')
+                form(method='post', role='form')
+                    .row
+                        .col-md-9
+                            .form-group
+                                label Name
+                                input#name.form-control(type='text', placeholder='Name', name='name', value="")
+                        .col-md-3
+                            .form-group
+                                label Age
+                                input#age.form-control(type='number', name='age')
+                        .col-md-7
+                            .form-group
+                                label Email
+                                input#email.form-control(type='email', placeholder='Email', name='email', value="")
+                        .col-md-5
+                            .form-group
+                                label Phone Number
+                                input#number.form-control(type='text', placeholder='Phone Number', name='number', value="", maxlength="10", width="10")
+                    hr
+                    .row
+                        .col-md-4
+                            .form-group
+                                label Weight (kgs)
+                                input#weight.form-control(type='number', name='weight')
+                        .col-md-4
+                            .form-group
+                                label Batch
+                                select#batch.form-control(name='yearpicker')
+                        .col-md-4
+                            .form-group
+                                label Semester
+                                input#semester.form-control(type='number', name='semester')
+                    hr
+                    .row
+                        .col-md-4
+                            .form-group
+                                label Sex
+                                br
+                                input(type='radio', name='gender', value='male', checked='')
+                                |  Male
+                                br
+                                input(type='radio', name='gender', value='female')
+                                |  Female
+                                br
+
+                        .col-md-4
+                            .form-group
+                                label Blood group
+                                br
+                                input(type='radio', name='bloodGroup', value='A', checked='')
+                                |  A
+                                br
+                                input(type='radio', name='bloodGroup', value='B')
+                                |  B
+                                br
+                                input(type='radio', name='bloodGroup', value='AB')
+                                |  AB
+                                br
+                                input(type='radio', name='bloodGroup', value='O')
+                                |  O
+                                br
+                        .col-md-4
+                            .form-group
+                                label Rhesus Factor
+                                br
+                                input(type='radio', name='rhesus', value='positive', checked='')
+                                |  Positive
+                                br
+                                input(type='radio', name='rhesus', value='negative')
+                                |  Negative
+                                br
+                    hr
+                    .row
+                        .col-md-12
+                            .form-group
+                                label Existing Medical Condition?
+                                textarea#medCond.form-control(placeholder='If yes, then describe...')
+                    hr
+                    .row
+                        .col-md-4
+                            label Last Donated
+                            input#lastDonated(type='date', name='lastDonated')
+                        .col-md-4
+                            button.btn.btn-block.btn-danger(type='button', onclick="cancel()")
+                                i.fa.fa-ban
+                                |  Cancel
+                        .col-md-4
+                            button.btn.btn-block.btn-primary(type='button', onclick="return edit()")
+                                i.fa.fa-floppy-o
+                                |  Save
+block dependencies
+    script(src='js/authenticate.js')
+    script(src='js/edit-donor.js')
+    script(src='js/plugins/metisMenu/jquery.metisMenu.js')
+    script(src='js/plugins/slimscroll/jquery.slimscroll.min.js')
+    // Custom and plugin javascript
+    script(src='js/inspinia.js')
+    script(src='js/plugins/pace/pace.min.js')

@@ -1,0 +1,25 @@
+//
+   Created by reetika on 15/3/16.
+extends layout
+block content
+    body.gray-bg
+        .middle-box.text-center.loginscreen.animated.fadeInDown
+            div
+                div
+                    h1.logo-name
+                h3 Welcome
+                p
+                p Login in.
+                form.m-t(role='form')
+                    .alert.alert-dismissible(style='display: none;')
+                    .form-group
+                        input#email.form-control(type='email', placeholder='Email', required='')
+                    .form-group
+                        input#password.form-control(type='password', placeholder='Password', required='')
+                    button.btn.btn-primary.block.full-width.m-b(type='button', onclick="login()") Login
+                    a(href="/reset-password.html")
+                        small Forgot password?
+                p.m-t
+                    small Reetika Roy © 2016
+block dependencies
+    script(src='js/login.js')

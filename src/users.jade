@@ -1,0 +1,39 @@
+//Created by reetika on 16/3/16.
+
+extends sidebar
+block main-body
+    .row
+        .col-md-12.col-sm-12
+            .ibox-title
+                h5
+                    | List of Users
+                    a.btn.btn-xs.btn-primary(href="/add-user.html") Add User
+            .ibox-content
+                .alert
+                table#datatable.table.table-bordered.table-condensed.table-striped
+                    thead
+                        tr
+                            th Name
+                            th Email
+                            th Created By
+                            th Action
+                    tbody
+.footer
+    .pull-right
+        | 10GB of
+        strong 250GB
+        |  Free.
+    div
+        strong Copyright
+        |  Example Company © 2014-2015
+
+block dependencies
+    // Custom and plugin javascript
+    script(src='js/inspinia.js')
+    script(src='js/plugins/pace/pace.min.js')
+    script(src='bower_components/datatables.net/js/jquery.dataTables.min.js')
+    script(src='js/authenticate.js')
+    script(src='js/user-details.js')
+    script(src='js/plugins/metisMenu/jquery.metisMenu.js')
+    script(src='js/plugins/slimscroll/jquery.slimscroll.min.js')
+
