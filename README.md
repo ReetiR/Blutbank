@@ -2,7 +2,7 @@
 Blood Bank registry for a NGO. Personal project.
 ...
 
-Use *grunt* to create build files.\s\s
+Use *grunt* to create build files.<br>
 Then deploy using *firebase deploy*.
 ...
 
